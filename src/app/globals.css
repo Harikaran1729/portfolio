@@ -1,15 +1,10 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +17,194 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar animations */
+@keyframes navTrace {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0.5;
+  }
+}
+
+.animate-trace {
+  stroke-dasharray: 100;
+  animation: navTrace 3s ease-in-out infinite;
+}
+
+.animate-trace-vertical {
+  stroke-dasharray: 100;
+  animation: navTrace 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Electronic component animations */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+}
+
+.component-animation {
+  animation: float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Pulse animation for circuit nodes */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Typing animation */
+.typing-text {
+  display: inline-block;
+  font-weight: inherit;
+  color: inherit;
+  white-space: nowrap;
+  min-height: 1.2em;
+  line-height: 1.2;
+}
+
+.typing-cursor {
+  display: inline-block;
+  font-weight: inherit;
+  color: #2563eb;
+  animation: cursor-blink 1.2s infinite;
+  margin-left: 1px;
+  vertical-align: top;
+  line-height: 1.2;
+}
+
+.typing-cursor.typing {
+  color: #2563eb;
+  text-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+}
+
+.typing-cursor.deleting {
+  color: #dc2626;
+  text-shadow: 0 0 8px rgba(220, 38, 38, 0.5);
+}
+
+.typing-cursor.paused {
+  color: #2563eb;
+  text-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+  animation: cursor-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes cursor-pulse {
+  0%, 50% { 
+    opacity: 1; 
+    transform: scale(1);
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+  }
+  51%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  }
+}
+
+/* Existing circuit animations */
+.circuit-node {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Profile photo hover effects */
+.profile-container:hover .floating-badge {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+/* Smooth transitions for responsive design */
+@media (max-width: 1024px) {
+  .hero-layout {
+    flex-direction: column;
+  }
+}
+
+/* Mobile optimization for typing animation */
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 0.9em;
+  }
+  .typing-cursor {
+    font-size: 0.9em;
+  }
+}
+
+/* Additional utility classes for animations */
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Additional layout stability for typing animation */
+.typing-container {
+  contain: layout style;
+  will-change: contents;
 }

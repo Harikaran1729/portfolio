@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
+
+A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🚀 Built with Next.js 14 and App Router
+- 💪 TypeScript for type safety
+- 🎨 Tailwind CSS for styling
+- 📱 Fully responsive design
+- ✨ Modern and clean UI
+- 🌓 Smooth animations
+- 📝 Contact form
+- 🎯 Skills visualization
+- 📂 Project showcase
 
 ## Getting Started
 

@@ -1,0 +1,75 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="150" fill="#f3f4f6"/>
+  
+  <!-- Inner circle -->
+  <circle cx="150" cy="150" r="120" fill="#e5e7eb"/>
+  
+  <!-- Electronics circuit pattern -->
+  <defs>
+    <pattern id="circuitPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none"/>
+      <circle cx="20" cy="20" r="2" fill="#3b82f6" opacity="0.3"/>
+      <line x1="0" y1="20" x2="40" y2="20" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+      <line x1="20" y1="0" x2="20" y2="40" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Apply pattern -->
+  <circle cx="150" cy="150" r="120" fill="url(#circuitPattern)" opacity="0.6"/>
+  
+  <!-- Profile silhouette -->
+  <g transform="translate(150,150)">
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="35" fill="#6b7280"/>
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="20" rx="45" ry="60" fill="#6b7280"/>
+    
+    <!-- Electronics overlay -->
+    <g opacity="0.4">
+      <!-- Microchip -->
+      <rect x="-15" y="-10" width="30" height="20" fill="#3b82f6" rx="2"/>
+      <circle cx="-10" cy="-5" r="1.5" fill="#ffffff"/>
+      <circle cx="0" cy="-5" r="1.5" fill="#ffffff"/>
+      <circle cx="10" cy="-5" r="1.5" fill="#ffffff"/>
+      <circle cx="-10" cy="5" r="1.5" fill="#ffffff"/>
+      <circle cx="0" cy="5" r="1.5" fill="#ffffff"/>
+      <circle cx="10" cy="5" r="1.5" fill="#ffffff"/>
+      
+      <!-- Circuit traces -->
+      <line x1="-25" y1="0" x2="-15" y2="0" stroke="#10b981" stroke-width="2"/>
+      <line x1="15" y1="0" x2="25" y2="0" stroke="#10b981" stroke-width="2"/>
+      <line x1="0" y1="-15" x2="0" y2="-10" stroke="#10b981" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <!-- Resistor symbol -->
+    <g transform="translate(60,80)">
+      <rect x="0" y="0" width="20" height="8" fill="none" stroke="#f59e0b" stroke-width="2"/>
+      <line x1="-10" y1="4" x2="0" y2="4" stroke="#f59e0b" stroke-width="2"/>
+      <line x1="20" y1="4" x2="30" y2="4" stroke="#f59e0b" stroke-width="2"/>
+    </g>
+    
+    <!-- Capacitor symbol -->
+    <g transform="translate(220,200)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#8b5cf6" stroke-width="3"/>
+      <line x1="8" y1="0" x2="8" y2="20" stroke="#8b5cf6" stroke-width="3"/>
+      <line x1="-10" y1="10" x2="0" y2="10" stroke="#8b5cf6" stroke-width="2"/>
+      <line x1="8" y1="10" x2="18" y2="10" stroke="#8b5cf6" stroke-width="2"/>
+    </g>
+    
+    <!-- LED symbol -->
+    <g transform="translate(80,220)">
+      <circle cx="0" cy="0" r="8" fill="#ef4444" opacity="0.6"/>
+      <polygon points="-5,-5 5,-5 0,5" fill="#ffffff"/>
+      <line x1="6" y1="-8" x2="12" y2="-12" stroke="#ef4444" stroke-width="2"/>
+      <line x1="8" y1="-6" x2="14" y2="-10" stroke="#ef4444" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Border -->
+  <circle cx="150" cy="150" r="148" fill="none" stroke="#d1d5db" stroke-width="4"/>
+</svg>
