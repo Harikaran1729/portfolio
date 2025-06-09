@@ -136,5 +136,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - Deployed on Vercel's global edge network
 
 ---
-
-⭐ **Star this repository if you found it helpful!** ⭐
